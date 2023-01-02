@@ -1,5 +1,9 @@
 # Create a function that we can re-use
 def show_distribution(var_data):
+    """
+    This function will take data from a column in a dataframe and 
+    return a detailed histogram and boxplot showing the summary statistics.
+    """
     from matplotlib import pyplot as plt
 
     # Get statistics
@@ -40,6 +44,10 @@ def show_distribution(var_data):
     fig.show()
 
 def show_density(var_data):
+    """
+    This function will take data from a column in a dataframe and 
+    return a color coded plot to show density.
+    """
     from matplotlib import pyplot as plt
 
     fig = plt.figure(figsize=(10,4))
@@ -59,6 +67,8 @@ def show_density(var_data):
     plt.show()
 
 # Get the variable to examine
-col = df_students['Grade']
+col = df['column_name']
 # Call the function
 show_distribution(col)
+# OR
+show_density(col)
