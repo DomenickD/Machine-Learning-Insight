@@ -1,3 +1,18 @@
+"""
+# In order to use this file in your code follow this template
+import requests
+from pathlib import Path
+# download helper functions from learn pytorch repo
+if Path("helper_functions.py").is_file():
+  print("Helper function exists, skipping download")
+else:
+  print("Download helper_functions.py")
+  request = requests.get("(Replace this with the raw github file at the top)")
+  with open("helper_functions.py", "wb") as f:
+    f.write(request.content)
+    
+"""
+
 # Create a function that we can re-use
 def show_distribution(var_data):
     """
